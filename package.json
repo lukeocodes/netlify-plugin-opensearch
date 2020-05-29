@@ -1,0 +1,26 @@
+{
+  "name": "netlify-plugin-opensearch",
+  "version": "1.0.0",
+  "description": "Automatically generate opensearch search.xml file postBuild on Netlify deploy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukeocodes/netlify-plugin-opensearch.git"
+  },
+  "keywords": [
+    "netlify",
+    "netlify-plugin",
+    "search",
+    "opensearch",
+    "serverless"
+  ],
+  "author": "Luke Oliff <luke@lukeoliff.com> (https://lukeoliff.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukeocodes/netlify-plugin-opensearch/issues"
+  },
+  "homepage": "https://github.com/lukeocodes/netlify-plugin-opensearch#readme"
+}
