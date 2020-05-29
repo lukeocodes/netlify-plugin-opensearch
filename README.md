@@ -11,7 +11,7 @@ To install, add the plugin in your `netlify.toml`. No config is required but we 
   package = netlify-plugin-opensearch
     # all inputs is optional, we just show you the defaults below
     # [plugins.inputs]
-      # searchUrl = `${process.env.URL}/search?q=`
+      # searchUrl = `${process.env.URL}/search?q=` # won't actually work
       # searchFile = 'search.xml'
       # siteShortName = 'Search'
       # siteDescription = null
@@ -35,7 +35,7 @@ Default config will generate the following file at `https://your-site-name.netli
 [[plugins]]
   package = netlify-plugin-opensearch
     [plugins.inputs]
-      searchUrl = `https://different-website.com/search?q=`
+      searchUrl = 'https://different-website.com/search?q='
       searchFile = 'opensearch.xml'
       siteShortName = 'My Site'
       siteDescription = 'Search cool content from my site'
