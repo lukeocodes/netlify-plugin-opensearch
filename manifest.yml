@@ -1,0 +1,9 @@
+name: netlify-plugin-opensearch
+
+inputs:
+  - name: searchUrl
+  - name: searchFile
+  - name: siteShortName
+  - name: siteDescription
+  - name: siteTags
+  - name: siteContact
