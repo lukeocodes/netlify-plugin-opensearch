@@ -56,6 +56,14 @@ Which will produce the following file at `https://your-site-name.netlify.app/ope
 </OpenSearchDescription>
 ```
 
+## Install on your website
+
+Now, a search metatag to the head of your site, changing `search.xml` to match your configuration above.
+
+```html
+<link rel="search" href="search.xml" type="application/opensearchdescription+xml" title="Your Site Name" />
+```
+
 ## Contributing
 
 Make pull-requests, but follow [code of conduct](CODE_OF_CONDUCT.md) please.
