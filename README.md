@@ -1,4 +1,4 @@
-# Netlify Algolia Index Plugin
+# Netlify Opensearch Plugin
 
 Automatically generate [opensearch](http://a9.com/-/spec/opensearch/1.1/) search.xml file postBuild on Netlify deploy.
 
