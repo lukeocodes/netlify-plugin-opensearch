@@ -1,3 +1,9 @@
+![](https://img.shields.io/badge/main-not%20master-green)
+![](https://img.shields.io/badge/made%20with-%E2%9D%A4-red)
+![](https://img.shields.io/npm/v/netlify-plugin-opensearch)
+![](https://img.shields.io/github/contributors/lukeocodes/netlify-plugin-opensearch)
+![](https://img.shields.io/github/issues/lukeocodes/netlify-plugin-opensearch)
+
 # Netlify Opensearch Plugin
 
 Automatically generate [OpenSearch](http://a9.com/-/spec/opensearch/1.1/) search.xml file postBuild on Netlify deploy.
