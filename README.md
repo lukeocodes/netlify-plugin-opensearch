@@ -2,21 +2,27 @@
 
 Automatically generate [opensearch](http://a9.com/-/spec/opensearch/1.1/) search.xml file postBuild on Netlify deploy.
 
+## What is this?
+
+Ever wondered why when you type a URL and the browser says "press TAB to search"? That's opensearch! In Chrome or Chromium, the URL bar (or Omnibox) offers the ability to search a site without navigating to the sites homepage. Once Chromium has determined it can search a site, any time the user types the URL of the site the user is reminded they can "press TAB to search". 
+
+Once the user presses TAB, they can type in a string and presses the enter. This automatically sents the user to the URL of the site search, along with their search terms, where the search is performed and results shown.
+
+Type in the URL of the search demo site and see! [https://netlify-plugin-algolia-search.netlify.app](https://netlify-plugin-algolia-search.netlify.app)
+
+![Screenshot 2020-06-24 at 08 58 25](https://user-images.githubusercontent.com/956290/85519211-0e529a00-b5f9-11ea-8909-b8fb2024d6f5.png)
+
+Then press TAB and you can search the demo site directly!
+
+![Screenshot 2020-06-24 at 08 58 30](https://user-images.githubusercontent.com/956290/85519208-0d216d00-b5f9-11ea-9dfd-705d5384e4e3.png)
+
 ## Usage
 
-To install, add the plugin in your `netlify.toml`. No config is required but we show the default options here.
+To install, add the plugin in your `netlify.toml`. No config is required.
 
 ```toml
 [[plugins]]
-  package = netlify-plugin-opensearch
-    # all inputs is optional, we just show you the defaults below
-    # [plugins.inputs]
-      # searchUrl = `${process.env.URL}/search?q=` # won't actually work
-      # searchFile = 'search.xml'
-      # siteShortName = 'Search'
-      # siteDescription = null
-      # siteTags = null
-      # siteContact = null
+  package = "netlify-plugin-opensearch"
 ```
 
 Default config will generate the following file at `https://your-site-name.netlify.app/search.xml`
@@ -29,7 +35,20 @@ Default config will generate the following file at `https://your-site-name.netli
 </OpenSearchDescription>
 ```
 
-## With All The Sprinkles
+## Options
+
+The available options.
+
+| plugins.inputs  | type  | required  | default  | description  |
+|---|---|---|---|---|
+| searchUrl | String | false | `<env.URL>/search?q=` | The URL of the search query, remembering that the search parameters are concatenated to the end as `{searchTerms}` |
+| searchFile | String | false | `search.xml` | The name of the file to be saved to. You'll need to configure your metadata to point to this file. |
+| siteShortName | String | false | Search | A short name of the site to search. **It must be 16 or fewer characters** |
+| siteDescription | String|null | false | null | A description of the site to search. **It must be 1024 or fewer characters** |
+| siteTags | String|null | false | null | Comma separated list of keywords and strings |
+| siteContact | String|null | false | null | Email address to contact the site |
+
+### Options Applied
 
 ```toml
 [[plugins]]
@@ -63,6 +82,10 @@ Now, a search metatag to the head of your site, changing `search.xml` to match y
 ```html
 <link rel="search" href="search.xml" type="application/opensearchdescription+xml" title="Your Site Name" />
 ```
+
+## To do
+
+- Better support for the OpenSearch specification [as documented here by MDN](https://developer.mozilla.org/en-US/docs/Web/OpenSearch).
 
 ## Contributing
 
