@@ -1,6 +1,6 @@
 # Netlify Opensearch Plugin
 
-Automatically generate [opensearch](http://a9.com/-/spec/opensearch/1.1/) search.xml file postBuild on Netlify deploy.
+Automatically generate [OpenSearch](http://a9.com/-/spec/opensearch/1.1/) search.xml file postBuild on Netlify deploy.
 
 ## What is this?
 
@@ -113,7 +113,7 @@ Now, a search metatag to the head of your site, changing `search.xml` to match y
 
 ## To do
 
-- Better support for the OpenSearch specification [as documented here by MDN](https://developer.mozilla.org/en-US/docs/Web/OpenSearch).
+- Better support for the OpenSearch specification [as documented here](http://a9.com/-/spec/opensearch/1.1/) and [here](https://developer.mozilla.org/en-US/docs/Web/OpenSearch).
 
 ## Contributing
 
