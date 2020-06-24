@@ -8,7 +8,7 @@ Ever wondered why when you type a URL and the browser says "press TAB to search"
 
 Once the user presses TAB, they can type in a string and presses the enter. This automatically sents the user to the URL of the site search, along with their search terms, where the search is performed and results shown.
 
-Type in the URL of the search demo site and see! [https://netlify-plugin-algolia-search.netlify.app](https://netlify-plugin-algolia-search.netlify.app)
+Type in the URL of the search demo site and see! [https://netlify-plugin-algolia-index.netlify.app](https://netlify-plugin-algolia-index.netlify.app)
 
 ![Screenshot 2020-06-24 at 08 58 25](https://user-images.githubusercontent.com/956290/85519211-0e529a00-b5f9-11ea-8909-b8fb2024d6f5.png)
 
@@ -50,19 +50,21 @@ The available options.
 
 ### Options Applied
 
+How to use these options:
+
 ```toml
 [[plugins]]
-  package = netlify-plugin-opensearch
+  package = "netlify-plugin-opensearch"
     [plugins.inputs]
-      searchUrl = 'https://different-website.com/search?q='
-      searchFile = 'opensearch.xml'
-      siteShortName = 'My Site'
-      siteDescription = 'Search cool content from my site'
-      siteTags = 'my site'
-      siteContact = 'me@my-site.com'
+      searchUrl = "https://different-website.com/search?q="
+      searchFile = "opensearch.xml"
+      siteShortName = "My Site"
+      siteDescription = "Search cool content from my site"
+      siteTags = "my site"
+      siteContact = "me@my-site.com"
 ```
 
-Which will produce the following file at `https://your-site-name.netlify.app/opensearch.xml`
+Which will produce the following file at `https://your-site-name.netlify.app/opensearch.xml`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -72,6 +74,32 @@ Which will produce the following file at `https://your-site-name.netlify.app/ope
   <Description>Search cool content from my site</Description>
   <Tags>my site</Tags>
   <Contact>me@my-site.com</Contact>
+</OpenSearchDescription>
+```
+
+### Options On the Demo Site
+
+For more context, this is how the demo site is configured:
+
+```toml
+[[plugins]]
+  package = "netlify-plugin-opensearch"
+    [plugins.inputs]
+      siteShortName = "Demo Site"
+      siteDescription = "Find stuff on the demo site"
+      siteTags = "demos"
+      siteContact = "luke@lukeoliff.com"
+```
+
+Which produced the following file as you can [see here](https://netlify-plugin-algolia-index.netlify.app/search.xml)
+
+```xml
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Demo Site</ShortName>
+  <Url type="text/html" template="https://netlify-plugin-algolia-index.netlify.app/search?q={searchTerms}"/>
+  <Description>Find stuff on the demo site</Description>
+  <Tags>demos</Tags>
+  <Contact>luke@lukeoliff.com</Contact>
 </OpenSearchDescription>
 ```
 
