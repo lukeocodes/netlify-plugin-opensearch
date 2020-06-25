@@ -14,7 +14,7 @@ Ever wondered why when you type a URL and the browser says "press TAB to search"
 
 Once the user presses TAB, they can type in a string and presses the enter. This automatically sents the user to the URL of the site search, along with their search terms, where the search is performed and results shown.
 
-Type in the URL of the search demo site and see! [https://netlify-plugin-algolia-index.netlify.app](https://netlify-plugin-algolia-index.netlify.app)
+Type in the URL of the search demo site and see! [https://netlify-plugins-by-lukeocodes.netlify.app](https://netlify-plugins-by-lukeocodes.netlify.app)
 
 ![Screenshot 2020-06-24 at 08 58 25](https://user-images.githubusercontent.com/956290/85519211-0e529a00-b5f9-11ea-8909-b8fb2024d6f5.png)
 
